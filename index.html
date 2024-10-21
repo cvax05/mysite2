@@ -3,107 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Resume</title>
+    <title>Your Name - Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
-
-        section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+        .container {
+            margin: 50px;
         }
-
-        section.active {
-            opacity: 1;
-        }
-
         h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5em;
         }
-
-        .content {
-            text-align: center;
-            background-color: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        p {
+            font-size: 1.2em;
         }
-
-        .section1 {
+        .resume-link {
+            margin-top: 20px;
+            padding: 10px 20px;
             background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
         }
-
-        .section2 {
-            background-color: #2ecc71;
-        }
-
-        .section3 {
-            background-color: #e74c3c;
-        }
-
-        .section4 {
-            background-color: #f39c12;
+        .resume-link:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
-
-<section class="section1" id="section1">
-    <div class="content">
-        <h1>About Me</h1>
-        <p>Hi, I’m [Your Name], a student at [University]. I’m passionate about [Your Major] and have experience in [Skill 1, Skill 2].</p>
+    <div class="container">
+        <h1>Your Name</h1>
+        <p>Welcome to my online resume page. Feel free to download my resume below.</p>
+        <a class="resume-link" href="path-to-your-resume.pdf" target="_blank">Download My Resume</a>
     </div>
-</section>
-
-<section class="section2" id="section2">
-    <div class="content">
-        <h1>Education</h1>
-        <p>[University Name], [Degree]</p>
-        <p>Graduation Year: [YYYY]</p>
-        <p>GPA: [Your GPA]</p>
-    </div>
-</section>
-
-<section class="section3" id="section3">
-    <div class="content">
-        <h1>Experience</h1>
-        <p>[Company Name], [Role]</p>
-        <p>Responsibilities: [Describe your key tasks]</p>
-    </div>
-</section>
-
-<section class="section4" id="section4">
-    <div class="content">
-        <h1>Skills</h1>
-        <p>[Skill 1], [Skill 2], [Skill 3]</p>
-    </div>
-</section>
-
-<script>
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        const scrollPosition = window.scrollY + window.innerHeight;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            
-            if (scrollPosition > sectionTop + 100) {
-                section.classList.add('active');
-            } else {
-                section.classList.remove('active');
-            }
-        });
-    });
-</script>
-
 </body>
 </html>
