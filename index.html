@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        section.active {
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            text-align: center;
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section1 {
+            background-color: #3498db;
+        }
+
+        .section2 {
+            background-color: #2ecc71;
+        }
+
+        .section3 {
+            background-color: #e74c3c;
+        }
+
+        .section4 {
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+<section class="section1" id="section1">
+    <div class="content">
+        <h1>About Me</h1>
+        <p>Hi, I’m [Your Name], a student at [University]. I’m passionate about [Your Major] and have experience in [Skill 1, Skill 2].</p>
+    </div>
+</section>
+
+<section class="section2" id="section2">
+    <div class="content">
+        <h1>Education</h1>
+        <p>[University Name], [Degree]</p>
+        <p>Graduation Year: [YYYY]</p>
+        <p>GPA: [Your GPA]</p>
+    </div>
+</section>
+
+<section class="section3" id="section3">
+    <div class="content">
+        <h1>Experience</h1>
+        <p>[Company Name], [Role]</p>
+        <p>Responsibilities: [Describe your key tasks]</p>
+    </div>
+</section>
+
+<section class="section4" id="section4">
+    <div class="content">
+        <h1>Skills</h1>
+        <p>[Skill 1], [Skill 2], [Skill 3]</p>
+    </div>
+</section>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const scrollPosition = window.scrollY + window.innerHeight;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            
+            if (scrollPosition > sectionTop + 100) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
